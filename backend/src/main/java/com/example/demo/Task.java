@@ -1,22 +1,34 @@
 package com.example.demo;
 
-/** the simplest task 
- * 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+/** * The simplest task 
  * @author luh
  */
 public class Task {
-	
-	private String taskdescription; // must have the EXACT name as his React state property and may not be ignored!
+    
+    private String taskdescription;
+    private String creationDate;
 
-	public Task() {
+    public Task() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        this.creationDate = LocalDateTime.now().format(formatter);
     }
 
-	public String getTaskdescription() { // do not apply camel-case here! Its a Bean!
-		return taskdescription;
-	}
+    public String getTaskdescription() { 
+        return taskdescription;
+    }
 
-	public void setTaskdescription(String taskdescription) { // do not apply camel-case here! Its a Bean!
-		this.taskdescription = taskdescription;
-	}
+    public void setTaskdescription(String taskdescription) {
+        this.taskdescription = taskdescription;
+    }
 
+    public String getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
+    }
 }
