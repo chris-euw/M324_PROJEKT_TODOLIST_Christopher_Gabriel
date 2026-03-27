@@ -18,4 +18,8 @@ public class TaskTest {
         assertFalse(creationDate.isEmpty(), "The creation date should not be an empty string.");
         
     }
+    @Test
+    public void newTaskShouldNotBeCompletedByDefault() { Task newTask = new Task();
+        assertFalse(newTask.isCompleted(), "A new task should not be completed by default.");
+    }
 }
