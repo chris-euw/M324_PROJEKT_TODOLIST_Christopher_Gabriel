@@ -1,16 +1,14 @@
-version: '3.8'
-
 services:
-  # Backend API service
   backend:
-    image: ghcr.io/<your-username>/<your-repo-name>-backend:latest
+    # Alles kleingeschrieben!
+    image: ghcr.io/devgzkt/m324_projekt_todolist_christopher_gabriel-backend:latest
     ports:
       - "8080:8080"
     restart: always
 
-  # Frontend web service
   frontend:
-    image: ghcr.io/<your-username>/<your-repo-name>-frontend:latest
+    # Alles kleingeschrieben!
+    image: ghcr.io/devgzkt/m324_projekt_todolist_christopher_gabriel-frontend:latest
     ports:
       - "80:80"
     depends_on:
