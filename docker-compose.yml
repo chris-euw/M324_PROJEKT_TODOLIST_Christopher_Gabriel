@@ -1,14 +1,12 @@
 services:
   backend:
-    # Alles kleingeschrieben!
-    image: ghcr.io/devgzkt/m324_projekt_todolist_christopher_gabriel-backend:latest
+    image: ghcr.io/chris-euw/todo-backend:latest
     ports:
       - "8080:8080"
     restart: always
 
   frontend:
-    # Alles kleingeschrieben!
-    image: ghcr.io/devgzkt/m324_projekt_todolist_christopher_gabriel-frontend:latest
+    image: ghcr.io/chris-euw/todo-frontend:latest
     ports:
       - "80:80"
     depends_on:
